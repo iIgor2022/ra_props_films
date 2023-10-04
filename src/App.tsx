@@ -1,7 +1,7 @@
 import './App.css'
 import Stars from './components/stars';
 
-function getRandomIntInclusive(min, max) {
+function getRandomIntInclusive(min: number, max: number) {
   min = Math.ceil(min);
   max = Math.floor(max);
 

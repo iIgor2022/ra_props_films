@@ -1,8 +1,8 @@
 import uniqid from "uniqid";
-import PropTypes from "prop-types";
 import Star from "./star";
+import React from "react";
 
-export default function Stars({ count = 0 }) {
+const Stars: React.FC<IStarsProps> = ({ count = 0 }) => {
   const notValidRating = !Number.isInteger(count) || count < 1 || count > 5;
 
   return notValidRating ? null : (
@@ -14,6 +14,8 @@ export default function Stars({ count = 0 }) {
   );
 }
 
-Stars.propTypes = {
-  count: PropTypes.number,
+export default Stars
+
+interface IStarsProps {
+  count: number,
 }
